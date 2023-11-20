@@ -1,0 +1,13 @@
+# Nota: ogni riga che comincia con "#" e' un commento!
+# Se vuoi creare un file postscript (adatto per la stampa e/o per essere
+# incluso in una relazione) in modo che contenga il grafico, togli il "#"
+# all'inizio delle DUE righe seguenti
+set term postscript eps color
+set output "segnale_modello.ps"
+set xlabel "x_2"
+set ylabel "\dot{x}_2"
+# unset key
+plot "segnale_modello.out" using 1:2 index 0 with dots lc 15 notitle,"ic.out" with points pt 13 ps 3 lc 15 notitle, "segnale_modello.out" using 1:2 index 1 with dots lc 14 notitle, "segnale_modello.out" using 1:2 index 2 with dots lc 10 notitle
+# Per terminare la creazione di un file postscript che contenga il grafico,
+# togli il "#" all'inizio della PROSSIMA riga
+quit

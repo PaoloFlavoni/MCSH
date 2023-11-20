@@ -1,0 +1,6 @@
+set terminal postscript enhanced
+set output "grafico_pendolo.ps"
+plot "pm_pendolo_eulero.out" with dots
+# Per terminare la creazione di un file postscript che contenga il grafico,
+# togli il "#" all'inizio della PROSSIMA riga
+quit

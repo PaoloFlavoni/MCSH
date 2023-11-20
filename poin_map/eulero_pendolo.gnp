@@ -1,0 +1,14 @@
+# Nota: ogni riga che comincia con "#" e' un commento!
+# Se vuoi creare un file postscript (adatto per la stampa e/o per essere
+# incluso in una relazione) in modo che contenga il grafico, togli il "#"
+# all'inizio delle DUE righe seguenti
+set terminal postscript enhanced
+set output "EPM.ps"
+set xlabel "x_{2}"
+set ylabel "y_{2}"
+unset key
+#set label '(a)' at 2.6,1.8
+plot "pm_pendolo_eulero.out"  with dots,"pm_pendolo_ic.inp" with points pt 7 ps 0.9
+# Per terminare la creazione di un file postscript che contenga il grafico,
+# togli il "#" all'inizio della PROSSIMA riga
+quit
